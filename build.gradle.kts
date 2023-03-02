@@ -16,10 +16,17 @@ repositories {
 }
 
 dependencies {
+    val openapi3Version = "1.6.14"
+
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+    // openapi3
+    implementation("org.springdoc:springdoc-openapi-ui:$openapi3Version")
+    implementation("org.springdoc:springdoc-openapi-webflux-ui:$openapi3Version")
+    implementation("org.springdoc:springdoc-openapi-kotlin:$openapi3Version")
 }
 
 tasks.withType<KotlinCompile> {
